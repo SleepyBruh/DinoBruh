@@ -4,6 +4,8 @@
 	"speed": 100,
 	"attack": {
 		"type": "none",
+		"cooldown": 0,
+		"min_distance": 0,
 		"lock_movement": true
 	},
 	"animations": {

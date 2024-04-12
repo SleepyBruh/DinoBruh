@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://brkm3deg4ohpm"]
+[gd_scene load_steps=2 format=3 uid="uid://brkm3deg4ohpm"]
+
+[ext_resource type="Script" path="res://debug/unit_select_button.gd" id="1_hoicw"]
 
 [node name="UnitSelectButton" type="Button"]
+script = ExtResource("1_hoicw")

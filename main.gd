@@ -30,16 +30,16 @@ static var random: RandomNumberGenerator = RandomNumberGenerator.new()
 func _ready():
 	var unit_index = 0
 	for unit_id in UnitType.registry:
-		var unit_button: Button = Button.new()
+		var unit_button: UnitSelectButton = load("res://debug/UnitSelectButton.tscn").instantiate()
 		unit_button.text = unit_id
 		unit_button.position.x = 152
 		unit_button.position.y = 56 * unit_index
+		unit_button.unit_type = unit_id
 		find_child("UI").add_child(unit_button)
 		unit_index += 1
-		unit_button.set
 
-var DEBUG_team = T_PLAYER
-var DEBUG_unit = "dino"
+static var DEBUG_team = T_PLAYER
+static var DEBUG_unit = "dino"
 
 func _on_switch_player_team_button_down():
 	DEBUG_team = T_PLAYER
@@ -51,3 +51,7 @@ func _on_switch_enemy_team_button_down():
 	DEBUG_team = T_ENEMIES
 	find_child("SwitchPlayerTeam").disabled = false
 	find_child("SwitchEnemyTeam").disabled = true
+
+func _physics_process(delta):
+	if Input.is_action_just_pressed("middle_mouse_click"):
+		UnitType.registry[DEBUG_unit].spawn(self,  get_global_mouse_position().x, get_global_mouse_position().y, DEBUG_team)
