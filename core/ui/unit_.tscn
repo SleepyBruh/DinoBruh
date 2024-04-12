@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmap3kbfi10w4"]
+
+[ext_resource type="Script" path="res://core/ui/unit_.gd" id="1_fxaow"]
+
+[node name="Unit_" type="Button"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -113.0
+offset_right = 186.0
+offset_bottom = -16.0
+grow_vertical = 0
+script = ExtResource("1_fxaow")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
