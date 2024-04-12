@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://o3x5pobgxh8g"]
+
+[ext_resource type="Script" path="res://core/bullet/bullet.gd" id="1_8xdui"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvdiq"]
+
+[node name="Bullet" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_kvdiq")
+script = ExtResource("1_8xdui")

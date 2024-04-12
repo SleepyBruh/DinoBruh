@@ -1,0 +1,19 @@
+{
+	"id": "dino",
+	"health": 100,
+	"speed": 400,
+	"attack": {
+		"type": "distant",
+		"cooldown": 5,
+		"min_distance": 128,
+		"bullet_type": "cannon_ball",
+		"lock_movement": true
+	},
+	"animations": {
+		"wait": {
+			"default": true,
+			"frames": 1,
+			"speed": 0
+		}
+	}
+}

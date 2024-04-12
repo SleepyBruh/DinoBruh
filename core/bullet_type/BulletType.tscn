@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c38g2gd4ea7o8"]
+
+[ext_resource type="Script" path="res://core/bullet_type/bullet_type.gd" id="1_jtv8m"]
+
+[node name="BulletType" type="Node"]
+script = ExtResource("1_jtv8m")

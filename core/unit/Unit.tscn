@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cge5lmkx8b47k"]
+
+[ext_resource type="Script" path="res://core/unit/unit.gd" id="1_udkdj"]
+[ext_resource type="Texture2D" uid="uid://b2kblj4odjo28" path="res://content/units/dino/wait-0.png" id="2_pangi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a48ur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pangi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnbj0"]
+radius = 15.5
+
+[node name="Unit" type="CharacterBody2D"]
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_udkdj")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a48ur")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rnbj0")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="SoftUpdateTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="NavigationAgent" type="NavigationAgent2D" parent="."]
+radius = 16.0
+debug_enabled = true
+
+[connection signal="timeout" from="SoftUpdateTimer" to="." method="_on_timer"]

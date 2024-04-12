@@ -1,0 +1,16 @@
+{
+	"id": "raptor",
+	"health": 100,
+	"speed": 100,
+	"attack": {
+		"type": "none",
+		"lock_movement": true
+	},
+	"animations": {
+		"run": {
+			"default": true,
+			"frames": 6,
+			"speed": 10
+		}
+	}
+}

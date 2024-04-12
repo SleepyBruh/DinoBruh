@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqofcqmufbox5"]
+
+[ext_resource type="Script" path="res://core/unit_type/unit_type.gd" id="1_a7c4k"]
+
+[node name="UnitType" type="Node"]
+script = ExtResource("1_a7c4k")

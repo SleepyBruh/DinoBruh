@@ -1,0 +1,14 @@
+{
+	"id": "cannon_ball",
+	"speed": 1000,
+	"damage": 10,
+	"movement_type": "bullet",
+	"lifetime": 10,
+	"animations": {
+		"default": {
+			"default": true,
+			"frames": 1,
+			"speed": 0
+		}
+	}
+}
