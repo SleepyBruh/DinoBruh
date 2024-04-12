@@ -2,6 +2,7 @@
 	"id": "dino",
 	"health": 100,
 	"speed": 400,
+	"cost": 15,
 	"attack": {
 		"type": "distant",
 		"cooldown": 5,

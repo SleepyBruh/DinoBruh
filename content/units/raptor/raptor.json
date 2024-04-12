@@ -2,6 +2,7 @@
 	"id": "raptor",
 	"health": 100,
 	"speed": 100,
+	"cost": 25,
 	"attack": {
 		"type": "none",
 		"cooldown": 0,

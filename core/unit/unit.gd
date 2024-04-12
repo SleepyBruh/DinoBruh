@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Unit
 
-var scene: Main
+var scene: Level_1
 var uuid: String
 var removed: bool = false
 var type: UnitType
@@ -22,7 +22,7 @@ var state: int = S_WAIT
 @onready var navigation_agent: NavigationAgent2D = find_child("NavigationAgent")
 
 func _init():
-	uuid = str(Main.random.randi_range(0, 9999999))
+	uuid = str(Level_1.random.randi_range(0, 9999999))
 
 func move(direction: Vector2, speed: float, delta: float):
 	velocity = direction * speed * delta

@@ -5,19 +5,17 @@
 [sub_resource type="GDScript" id="GDScript_vnrcs"]
 script/source = "extends Label
 
-@onready var bal
-
 func _ready():
 	if GlobalDate.get_level() == \"Level_1\":
-		bal = Level_1.get_balance()
+		var bal = Level_1.get_bal()
 	elif GlobalDate.get_level() == \"Level_2\":
-		bal = Level_1.get_balance()
+		var bal = $Info.Balance
 	elif GlobalDate.get_level() == \"Level_3\":
-		bal = Level_1.get_balance()
+		var bal = $Info.Balance
 	elif GlobalDate.get_level() == \"Level_4\":
-		bal = Level_1.get_balance()
+		var bal = $Info.Balance
 	elif GlobalDate.get_level() == \"Level_5\":
-		bal = Level_1.get_balance()
+		var bal = $Info.Balance
 
 
 func _process(delta):

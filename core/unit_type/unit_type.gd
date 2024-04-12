@@ -7,6 +7,7 @@ var id: String
 var animations: Dictionary
 var default_animation: String
 
+var cost: int
 var health: float
 var speed: float
 var attack: Dictionary
@@ -30,6 +31,7 @@ func _init(data: Dictionary):
 		for frame_index: int in range(animation_data.frames):
 			self.animations[animation_name].frames.append(ImageTexture.create_from_image(Image.load_from_file("content/units/" + id + "/" + animation_name + "-" + str(frame_index) + ".png")))
 	
+	cost = data.cost
 	health = data.health
 	speed = data.speed
 	attack = data.attack
@@ -104,9 +106,9 @@ func attack_unit(scene: Node2D, unit: Unit, target: Unit, delta: float):
 		attack.bullet.spawn(scene, unit.position.x, unit.position.y, unit.team, target.position)
 
 func on_soft_update(scene: Node2D, unit: Unit):
-	if unit.team == Main.T_ENEMIES:
+	if unit.team == Level_1.T_ENEMIES:
 		return
-	var enemy: Unit = Units.find_closest(unit, Main.find_enemy_team(unit.team))
+	var enemy: Unit = Units.find_closest(unit, Level_1.find_enemy_team(unit.team))
 	if enemy == null:
 		unit.state = Unit.S_WAIT
 		return

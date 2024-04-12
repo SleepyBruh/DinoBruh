@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 class_name Bullet
 
-var scene: Main
+var scene: Level_1
 var uuid: String
 var removed: bool = false
 var type: BulletType
@@ -18,7 +18,7 @@ static var DR_UNIT = "unit"
 static var DR_LIFETIME = "lifetime"
 
 func _init():
-	uuid = str(Main.random.randi_range(0, 9999999))
+	uuid = str(Level_1.random.randi_range(0, 9999999))
 
 #func move(direction: Vector2, speed: float, delta: float):
 	#velocity = direction * speed * delta

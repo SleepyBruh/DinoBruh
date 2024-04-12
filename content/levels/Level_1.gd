@@ -1,5 +1,10 @@
 extends Node2D
-class_name Main
+class_name Level_1
+
+static var Balance: int = 1000
+
+static func get_balance():
+	return Balance
 
 static func find_by_class(root: Node, class_name_ : String) -> Array:
 	var found: Array = []

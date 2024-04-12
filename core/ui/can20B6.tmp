@@ -5,23 +5,12 @@
 [sub_resource type="GDScript" id="GDScript_vnrcs"]
 script/source = "extends Label
 
-@onready var bal
-
-func _ready():
-	if GlobalDate.get_level() == \"Level_1\":
-		bal = Level_1.get_balance()
-	elif GlobalDate.get_level() == \"Level_2\":
-		bal = Level_1.get_balance()
-	elif GlobalDate.get_level() == \"Level_3\":
-		bal = Level_1.get_balance()
-	elif GlobalDate.get_level() == \"Level_4\":
-		bal = Level_1.get_balance()
-	elif GlobalDate.get_level() == \"Level_5\":
-		bal = Level_1.get_balance()
-
+@onready Lev = \"res://balances/level_\" + str(level_number) + \".json\"
+var Bal = 0
 
 func _process(delta):
-	text = \"Balance: \" + str(bal)
+	Bal = Lev.Bala
+	text = \"Balance \" + str(Bal)
 "
 
 [node name="CanvasLayer" type="CanvasLayer"]

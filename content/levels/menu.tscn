@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj8snpbhsyq07"]
+
+[sub_resource type="GDScript" id="GDScript_8pwdp"]
+script/source = "extends Node2D
+
+func _on_start_pressed():
+	GlobalDate.set_level(\"Chooce\")
+	get_tree().change_scene_to_file(\"res://content/levels/chooce.tscn\")
+	print(GlobalDate.get_level())
+
+func _on_quit_pressed():
+	get_tree().quit()
+"
+
+[node name="Menu" type="Node2D"]
+script = SubResource("GDScript_8pwdp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.458
+anchor_top = 0.344
+anchor_right = 0.458
+anchor_bottom = 0.344
+offset_left = -107.616
+offset_top = -39.912
+offset_right = 108.384
+offset_bottom = 40.088
+theme_override_font_sizes/font_size = 20
+text = "CHOSE LEVEL"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.457
+anchor_top = 0.739
+anchor_right = 0.457
+anchor_bottom = 0.739
+offset_left = -107.464
+offset_top = -39.872
+offset_right = 108.536
+offset_bottom = 40.128
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+
+[node name="Setting" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.458
+anchor_top = 0.539
+anchor_right = 0.458
+anchor_bottom = 0.539
+offset_left = -107.616
+offset_top = -40.272
+offset_right = 108.384
+offset_bottom = 39.728
+theme_override_font_sizes/font_size = 20
+text = "SETTING"
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

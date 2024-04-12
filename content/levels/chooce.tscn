@@ -1,0 +1,131 @@
+[gd_scene load_steps=2 format=3 uid="uid://s5ip6n0fvort"]
+
+[sub_resource type="GDScript" id="GDScript_sag4p"]
+script/source = "extends Node2D
+
+
+func _on_lev_1_pressed():
+	GlobalDate.set_level(\"Level_1\")
+	print(GlobalDate.get_level())
+	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
+
+
+func _on_qiut_pressed():
+	GlobalDate.set_level(\"Menu\")
+	print(GlobalDate.get_level())
+	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
+
+
+func _on_lev_2_pressed():
+	GlobalDate.set_level(\"Level_2\")
+	print(GlobalDate.get_level())
+	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
+
+
+func _on_lev_3_pressed():
+	GlobalDate.set_level(\"Level_3\")
+	print(GlobalDate.get_level())
+	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
+
+
+func _on_lev_4_pressed():
+	GlobalDate.set_level(\"Level_4\")
+	print(GlobalDate.get_level())
+	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
+
+
+func _on_lev_5_pressed():
+	GlobalDate.set_level(\"Level_5\")
+	print(GlobalDate.get_level())
+	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
+"
+
+[node name="Chooce" type="Node2D"]
+script = SubResource("GDScript_sag4p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="lev1" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.25
+anchor_right = 0.1
+anchor_bottom = 0.25
+offset_left = -60.2
+offset_top = -55.0
+offset_right = 55.8
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 60
+text = "1"
+
+[node name="lev2" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.25
+anchor_right = 0.3
+anchor_bottom = 0.25
+offset_left = -57.6
+offset_top = -54.0
+offset_right = 59.4
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 60
+text = "2"
+
+[node name="lev3" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+offset_left = -58.0
+offset_top = -57.0
+offset_right = 59.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 60
+text = "3"
+
+[node name="lev4" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.7
+anchor_top = 0.25
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = -61.4
+offset_top = -56.0
+offset_right = 55.6
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 60
+text = "4"
+
+[node name="lev5" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.25
+anchor_right = 0.9
+anchor_bottom = 0.25
+offset_left = -57.7999
+offset_top = -57.0
+offset_right = 59.2
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 60
+text = "5"
+
+[node name="Qiut" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.468
+anchor_top = 0.856
+anchor_right = 0.468
+anchor_bottom = 0.856
+offset_left = -167.136
+offset_top = -39.688
+offset_right = 166.864
+offset_bottom = 39.312
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[connection signal="pressed" from="CanvasLayer/lev1" to="." method="_on_lev_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/lev2" to="." method="_on_lev_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/lev3" to="." method="_on_lev_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/lev4" to="." method="_on_lev_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/lev5" to="." method="_on_lev_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Qiut" to="." method="_on_qiut_pressed"]
