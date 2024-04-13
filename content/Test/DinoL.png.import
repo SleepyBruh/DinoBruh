@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1jdar5xxdg5q"
-path="res://.godot/imported/Dino1.png-2de0fe4cadc56d874385a8a45836113b.ctex"
+uid="uid://bvsqi3g0x8q1d"
+path="res://.godot/imported/DinoL.png-e25730ab798eb5b07afdfca0e3d74720.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://content/Test/Dino1.png"
-dest_files=["res://.godot/imported/Dino1.png-2de0fe4cadc56d874385a8a45836113b.ctex"]
+source_file="res://content/Test/DinoL.png"
+dest_files=["res://.godot/imported/DinoL.png-e25730ab798eb5b07afdfca0e3d74720.ctex"]
 
 [params]
 
