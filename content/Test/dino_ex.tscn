@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0pf5exm6vl81" path="res://content/Test/Dino1.png" id="1_415c7"]
 [ext_resource type="Texture2D" uid="uid://c6kc6ds8tom" path="res://content/Test/Dino2 (1).png" id="2_6drbl"]
-[ext_resource type="Texture2D" uid="uid://dkhgdlps6olp3" path="res://content/Test/RDino (1).png" id="3_1dcvo"]
+[ext_resource type="Texture2D" uid="uid://cvsvhxps3gh61" path="res://content/Test/RunDino.png" id="3_jusvl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_crsh3"]
 
@@ -24,7 +24,7 @@ animations = [{
 "texture": ExtResource("1_415c7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_1dcvo")
+"texture": ExtResource("3_jusvl")
 }],
 "loop": true,
 "name": &"Run",
@@ -40,4 +40,4 @@ shape = SubResource("CapsuleShape2D_crsh3")
 sprite_frames = SubResource("SpriteFrames_5aw6s")
 animation = &"Run"
 autoplay = "Idle"
-frame_progress = 0.435911
+frame_progress = 0.0750722
