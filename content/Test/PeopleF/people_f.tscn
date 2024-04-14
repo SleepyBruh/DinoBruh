@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyapee2ovrqj4"]
 
-[ext_resource type="Texture2D" uid="uid://dma7jfs5b1cms" path="res://content/Test/PeopleF/People_1.png" id="1_q0vkc"]
-[ext_resource type="Texture2D" uid="uid://rb54ymwtn31v" path="res://content/Test/PeopleF/People_2.png" id="2_rugqa"]
-[ext_resource type="Texture2D" uid="uid://dwbdycyjymw32" path="res://content/Test/PeopleF/People_3.png" id="3_y5jqi"]
-[ext_resource type="Texture2D" uid="uid://dxqceuednf5c" path="res://content/Test/PeopleF/People_5.png" id="4_tfngr"]
-[ext_resource type="Texture2D" uid="uid://btc6gjrtp1eej" path="res://content/Test/PeopleF/People_6.png" id="5_arvna"]
+[ext_resource type="Texture2D" uid="uid://c2mwnl7ni221h" path="res://content/units/soldier/walk-0.png" id="1_y8duw"]
+[ext_resource type="Texture2D" uid="uid://cfatr5g8apgui" path="res://content/units/soldier/walk-1.png" id="2_tih05"]
+[ext_resource type="Texture2D" uid="uid://20p2pm0i53sp" path="res://content/units/soldier/walk-2.png" id="3_6eg5v"]
+[ext_resource type="Texture2D" uid="uid://w40j4xqw5c2e" path="res://content/units/soldier/walk-3.png" id="4_ow76i"]
+[ext_resource type="Texture2D" uid="uid://bac2fh10yo7wj" path="res://content/units/soldier/walk-4.png" id="5_sqi68"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fx50y"]
 
@@ -12,13 +12,13 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_q0vkc")
+"texture": ExtResource("1_y8duw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_rugqa")
+"texture": ExtResource("2_tih05")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_y5jqi")
+"texture": ExtResource("3_6eg5v")
 }],
 "loop": true,
 "name": &"Idle",
@@ -26,10 +26,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_tfngr")
+"texture": ExtResource("4_ow76i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_arvna")
+"texture": ExtResource("5_sqi68")
 }],
 "loop": true,
 "name": &"Run",
@@ -44,4 +44,4 @@ shape = SubResource("CapsuleShape2D_fx50y")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ir3qc")
 animation = &"Run"
-frame_progress = 0.876352
+frame_progress = 0.00625803

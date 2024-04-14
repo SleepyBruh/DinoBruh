@@ -12,10 +12,10 @@
 		"lock_movement": true
 	},
 	"animations": {
-		"wait": {
+		"walk": {
 			"default": true,
-			"frames": 1,
-			"speed": 0
+			"frames": 5,
+			"speed": 10
 		}
 	}
 }

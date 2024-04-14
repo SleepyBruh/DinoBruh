@@ -1,13 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://cge5lmkx8b47k"]
 
 [ext_resource type="Script" path="res://core/unit/unit.gd" id="1_udkdj"]
-[ext_resource type="Texture2D" uid="uid://b2kblj4odjo28" path="res://content/units/soldier/wait-0.png" id="2_pangi"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ffw3p"]
+load_path = "res://.godot/imported/wait-0.png-0de397d576b470d3f99408f3f80cf2f0.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a48ur"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_pangi")
+"texture": SubResource("CompressedTexture2D_ffw3p")
 }],
 "loop": true,
 "name": &"default",
