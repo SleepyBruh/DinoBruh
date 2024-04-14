@@ -1,13 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxx1sroah1l7o"]
+[gd_scene load_steps=10 format=3 uid="uid://bxx1sroah1l7o"]
 
-[ext_resource type="Texture2D" uid="uid://c1jdar5xxdg5q" path="res://content/Test/Dino1.png" id="1_415c7"]
-[ext_resource type="Texture2D" uid="uid://bvsqi3g0x8q1d" path="res://content/Test/DinoL.png" id="1_lwep4"]
-[ext_resource type="Texture2D" path="res://content/Test/Dino2 (1).png" id="2_6drbl"]
-[ext_resource type="Texture2D" uid="uid://cpv4m4fk56m6x" path="res://content/Test/DinoDead1.png" id="2_xexvq"]
-[ext_resource type="Texture2D" uid="uid://biytpskhjfrym" path="res://content/Test/DinoDead2.png" id="3_8ys2j"]
-[ext_resource type="Texture2D" uid="uid://c5lfdmys5x5wg" path="res://content/Test/RunDino.png" id="3_jusvl"]
-[ext_resource type="Texture2D" uid="uid://bs6pvi6mrihpf" path="res://content/Test/DinoDead3.png" id="4_vam21"]
-[ext_resource type="Texture2D" uid="uid://c6uy71hvfgrwg" path="res://content/Test/DinoDead4.png" id="5_ptvwk"]
+[ext_resource type="Texture2D" uid="uid://bvsqi3g0x8q1d" path="res://content/Test/Dino/DinoL.png" id="1_lwep4"]
+[ext_resource type="Texture2D" uid="uid://cpv4m4fk56m6x" path="res://content/Test/Dino/DinoDead1.png" id="2_xexvq"]
+[ext_resource type="Texture2D" uid="uid://biytpskhjfrym" path="res://content/Test/Dino/DinoDead2.png" id="3_8ys2j"]
+[ext_resource type="Texture2D" uid="uid://bs6pvi6mrihpf" path="res://content/Test/Dino/DinoDead3.png" id="4_vam21"]
+[ext_resource type="Texture2D" uid="uid://c6uy71hvfgrwg" path="res://content/Test/Dino/DinoDead4.png" id="5_ptvwk"]
+[ext_resource type="Texture2D" uid="uid://gsdwygn1fya2" path="res://content/Test/Dino/IdleDinoL.png" id="6_atjh6"]
+[ext_resource type="Texture2D" uid="uid://djg36oo8l6bi8" path="res://content/Test/Dino/RunDinoL.png" id="7_hrpnf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4eeg"]
 size = Vector2(37, 24)
@@ -36,10 +35,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_415c7")
+"texture": ExtResource("1_lwep4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_6drbl")
+"texture": ExtResource("6_atjh6")
 }],
 "loop": true,
 "name": &"Idle",
@@ -47,10 +46,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_415c7")
+"texture": ExtResource("1_lwep4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_jusvl")
+"texture": ExtResource("7_hrpnf")
 }],
 "loop": true,
 "name": &"Run",
@@ -66,6 +65,7 @@ shape = SubResource("RectangleShape2D_k4eeg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 4)
 sprite_frames = SubResource("SpriteFrames_5aw6s")
-animation = &"Run"
+animation = &"Dead"
 autoplay = "Idle"
-frame_progress = 0.0538719
+frame = 4
+frame_progress = 1.0
