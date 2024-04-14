@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cge5lmkx8b47k"]
 
 [ext_resource type="Script" path="res://core/unit/unit.gd" id="1_udkdj"]
-[ext_resource type="Texture2D" uid="uid://b2kblj4odjo28" path="res://content/units/dino/wait-0.png" id="2_pangi"]
+[ext_resource type="Texture2D" uid="uid://b2kblj4odjo28" path="res://content/units/soldier/wait-0.png" id="2_pangi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a48ur"]
 animations = [{
@@ -35,6 +35,5 @@ autostart = true
 
 [node name="NavigationAgent" type="NavigationAgent2D" parent="."]
 radius = 16.0
-debug_enabled = true
 
 [connection signal="timeout" from="SoftUpdateTimer" to="." method="_on_timer"]

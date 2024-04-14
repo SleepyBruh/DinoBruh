@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://s5ip6n0fvort"]
+[gd_scene load_steps=3 format=3 uid="uid://s5ip6n0fvort"]
 
 [sub_resource type="GDScript" id="GDScript_sag4p"]
 script/source = "extends Node2D
@@ -40,6 +40,9 @@ func _on_lev_5_pressed():
 	get_tree().change_scene_to_file(\"res://content/levels/\" + GlobalDate.get_level() + \".tscn\")
 "
 
+[sub_resource type="LabelSettings" id="LabelSettings_ucwvx"]
+font_size = 35
+
 [node name="Chooce" type="Node2D"]
 script = SubResource("GDScript_sag4p")
 
@@ -69,6 +72,7 @@ offset_top = -54.0
 offset_right = 59.4
 offset_bottom = 53.0
 theme_override_font_sizes/font_size = 60
+disabled = true
 text = "2"
 
 [node name="lev3" type="Button" parent="CanvasLayer"]
@@ -82,6 +86,7 @@ offset_top = -57.0
 offset_right = 59.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 60
+disabled = true
 text = "3"
 
 [node name="lev4" type="Button" parent="CanvasLayer"]
@@ -95,6 +100,7 @@ offset_top = -56.0
 offset_right = 55.6
 offset_bottom = 51.0
 theme_override_font_sizes/font_size = 60
+disabled = true
 text = "4"
 
 [node name="lev5" type="Button" parent="CanvasLayer"]
@@ -108,6 +114,7 @@ offset_top = -57.0
 offset_right = 59.2
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 60
+disabled = true
 text = "5"
 
 [node name="Qiut" type="Button" parent="CanvasLayer"]
@@ -121,7 +128,23 @@ offset_top = -39.688
 offset_right = 166.864
 offset_bottom = 39.312
 theme_override_font_sizes/font_size = 50
-text = "BACK"
+text = "Назад"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.532
+anchor_top = 0.481
+anchor_right = 0.532
+anchor_bottom = 0.481
+offset_left = -320.864
+offset_top = -85.688
+offset_right = 395.136
+offset_bottom = 15.312
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ох, кажется уровни со второго по пятый
+в разаботке..."
+label_settings = SubResource("LabelSettings_ucwvx")
 
 [connection signal="pressed" from="CanvasLayer/lev1" to="." method="_on_lev_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/lev2" to="." method="_on_lev_2_pressed"]

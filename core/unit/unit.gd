@@ -26,10 +26,17 @@ func _init():
 
 func move(direction: Vector2, speed: float, delta: float):
 	velocity = direction * speed * delta
-	if velocity.x < 0:
-		find_child("Sprite").flip_h = true
+	var mirror = type.animations[find_child("Sprite").animation].mirror
+	if not mirror:
+		if velocity.x < 0:
+			find_child("Sprite").flip_h = true
+		else:
+			find_child("Sprite").flip_h = false
 	else:
-		find_child("Sprite").flip_h = false
+		if velocity.x < 0:
+			find_child("Sprite").flip_h = false
+		else:
+			find_child("Sprite").flip_h = true
 	move_and_slide()
 
 func remove():

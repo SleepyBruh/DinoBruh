@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biytpskhjfrym"
-path="res://.godot/imported/DinoDead2.png-651402dea71a219222342e5bb58a35d6.ctex"
+path="res://.godot/imported/DinoDead2.png-669ab29cedc61a26bb4f2e51b30363a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://content/Test/DinoDead2.png"
-dest_files=["res://.godot/imported/DinoDead2.png-651402dea71a219222342e5bb58a35d6.ctex"]
+source_file="res://content/Test/Dino/DinoDead2.png"
+dest_files=["res://.godot/imported/DinoDead2.png-669ab29cedc61a26bb4f2e51b30363a9.ctex"]
 
 [params]
 

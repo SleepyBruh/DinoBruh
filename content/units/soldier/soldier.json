@@ -1,12 +1,13 @@
 {
-	"id": "dino",
+	"id": "soldier",
 	"health": 100,
-	"speed": 400,
-	"cost": 15,
+	"speed": 100,
+	"cost": 100,
+	"display_name": "Солдат",
 	"attack": {
 		"type": "distant",
-		"cooldown": 5,
-		"min_distance": 128,
+		"cooldown": 1,
+		"min_distance": 64,
 		"bullet_type": "cannon_ball",
 		"lock_movement": true
 	},

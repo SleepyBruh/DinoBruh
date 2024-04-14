@@ -1,0 +1,22 @@
+{
+	"id": "red_dino",
+	"health": 200,
+	"speed": 33,
+	"cost": 200,
+	"display_name": "Динозавр с орудием",
+	"attack": {
+		"type": "distant",
+		"cooldown": 10,
+		"min_distance": 128,
+		"bullet_type": "cannon_ball",
+		"lock_movement": true
+	},
+	"animations": {
+		"walk": {
+			"mirror": true,
+			"default": true,
+			"frames": 2,
+			"speed": 10
+		}
+	}
+}

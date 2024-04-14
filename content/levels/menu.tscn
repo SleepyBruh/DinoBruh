@@ -28,7 +28,7 @@ offset_top = -39.912
 offset_right = 108.384
 offset_bottom = 40.088
 theme_override_font_sizes/font_size = 20
-text = "CHOSE LEVEL"
+text = "Выбрать уровень"
 
 [node name="Quit" type="Button" parent="CanvasLayer"]
 anchors_preset = -1
@@ -41,7 +41,7 @@ offset_top = -39.872
 offset_right = 108.536
 offset_bottom = 40.128
 theme_override_font_sizes/font_size = 20
-text = "QUIT"
+text = "Выход"
 
 [node name="Setting" type="Button" parent="CanvasLayer"]
 anchors_preset = -1
@@ -54,7 +54,8 @@ offset_top = -40.272
 offset_right = 108.384
 offset_bottom = 39.728
 theme_override_font_sizes/font_size = 20
-text = "SETTING"
+disabled = true
+text = "Настройки"
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

@@ -3,7 +3,16 @@ class_name ButtonUnit
 
 var Un: String
 
+static var click: bool = false
+
 func _on_pressed():
 	var Unit: UnitType = UnitType.registry[Un]
-	$"../Tab".text = "Health " + str(Unit.health) + '\n' + "Speed " + str(Unit.speed) + '\n' + "Cost " + str(Unit.cost)
-	print(Un)
+	$"../Tab".text = "Здоровье: " + str(Unit.health) + '\n' + "Скорость: " + str(Unit.speed) + '\n' + "Стоимость: " + str(Unit.cost)
+	Level_1.DEBUG_unit = Unit.id
+
+func _on_mouse_entered():
+	click = true
+
+
+func _on_mouse_exited():
+	click = false

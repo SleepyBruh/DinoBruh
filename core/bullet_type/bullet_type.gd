@@ -47,7 +47,8 @@ func spawn(scene: Node2D, x: float, y: float, team: int, target: Vector2) -> Bul
 	bullet.sprite_frames = sprite_frames
 	for animation_name: String in self.animations:
 		var animation_data: Dictionary = self.animations[animation_name]
-		sprite_frames.add_animation(animation_name)
+		if not sprite_frames.has_animation(animation_name):
+			sprite_frames.add_animation(animation_name)
 		sprite_frames.set_animation_speed(animation_name, animation_data.speed)
 		for frame: ImageTexture in animation_data.frames:
 			sprite_frames.add_frame(animation_name, frame)

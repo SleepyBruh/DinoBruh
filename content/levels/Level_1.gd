@@ -25,26 +25,29 @@ static func find_enemy_team(team: int) -> int:
 		return T_PLAYER
 	return T_UNKNOWN
 
-static var U_DINO: UnitType = UnitType.load("dino")
-static var U_RAPTOR: UnitType = UnitType.load("raptor")
+# static var U_DINO: UnitType = UnitType.load("dino")
+# static var U_RAPTOR: UnitType = UnitType.load("raptor")
+static var U_SOLDIER: UnitType = UnitType.load("soldier")
+static var U_RED_DINO: UnitType = UnitType.load("red_dino")
 
 @onready var scene: Node2D = get_node(".")
 @onready var camera: Camera2D = get_node("Camera")
 static var random: RandomNumberGenerator = RandomNumberGenerator.new()
 
 func _ready():
-	var unit_index = 0
-	for unit_id in UnitType.registry:
-		var unit_button: UnitSelectButton = load("res://debug/UnitSelectButton.tscn").instantiate()
-		unit_button.text = unit_id
-		unit_button.position.x = 152
-		unit_button.position.y = 56 * unit_index
-		unit_button.unit_type = unit_id
-		find_child("UI").add_child(unit_button)
-		unit_index += 1
+	#var unit_index = 0
+	#for unit_id in UnitType.registry:
+		#var unit_button: UnitSelectButton = load("res://debug/UnitSelectButton.tscn").instantiate()
+		#unit_button.text = unit_id
+		#unit_button.position.x = 152
+		#unit_button.position.y = 56 * unit_index
+		#unit_button.unit_type = unit_id
+		#find_child("UI").add_child(unit_button)
+		#unit_index += 1
+	pass
 
 static var DEBUG_team = T_PLAYER
-static var DEBUG_unit = "dino"
+static var DEBUG_unit = "soldier"
 
 func _on_switch_player_team_button_down():
 	DEBUG_team = T_PLAYER
@@ -58,5 +61,5 @@ func _on_switch_enemy_team_button_down():
 	find_child("SwitchEnemyTeam").disabled = true
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("middle_mouse_click"):
+	if Input.is_action_just_pressed("left_mouse_click") and not ButtonUnit.click:
 		UnitType.registry[DEBUG_unit].spawn(self,  get_global_mouse_position().x, get_global_mouse_position().y, DEBUG_team)

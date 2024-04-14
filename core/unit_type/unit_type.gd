@@ -11,6 +11,7 @@ var cost: int
 var health: float
 var speed: float
 var attack: Dictionary
+var display_name: String
 
 static func load(id: String) -> UnitType:
 	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("content/units/{id}/{id}.json".format({"id": id})))
@@ -26,6 +27,10 @@ func _init(data: Dictionary):
 		if "default" in animation_data:
 			if animation_data.default:
 				self.default_animation = animation_name
+		if "mirror" in animation_data:
+			animations[animation_name].mirror = animation_data.mirror
+		else:
+			animations[animation_name].mirror = false
 		self.animations[animation_name].speed = animation_data.speed
 		self.animations[animation_name].frames = []
 		for frame_index: int in range(animation_data.frames):
@@ -35,6 +40,7 @@ func _init(data: Dictionary):
 	health = data.health
 	speed = data.speed
 	attack = data.attack
+	display_name = data.display_name
 	if attack.type == Unit.AT_DISTANT:
 		attack.bullet = BulletType.load(attack.bullet_type)
 		
@@ -106,8 +112,6 @@ func attack_unit(scene: Node2D, unit: Unit, target: Unit, delta: float):
 		attack.bullet.spawn(scene, unit.position.x, unit.position.y, unit.team, target.position)
 
 func on_soft_update(scene: Node2D, unit: Unit):
-	if unit.team == Level_1.T_ENEMIES:
-		return
 	var enemy: Unit = Units.find_closest(unit, Level_1.find_enemy_team(unit.team))
 	if enemy == null:
 		unit.state = Unit.S_WAIT
