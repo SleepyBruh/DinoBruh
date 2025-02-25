@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsnosuiw1f2t6"]
+[gd_scene load_steps=7 format=3 uid="uid://dsnosuiw1f2t6"]
 
 [ext_resource type="Script" path="res://content/levels/Level_1.gd" id="1_f1l7y"]
 [ext_resource type="TileSet" uid="uid://cwr4elh202v03" path="res://core/tile/tileset.tres" id="2_l8mo7"]
 [ext_resource type="Script" path="res://core/camera/camera.gd" id="3_ojimg"]
 [ext_resource type="PackedScene" uid="uid://bhak21aw25rkg" path="res://core/ui/canvas_layer.tscn" id="4_56hp1"]
+[ext_resource type="PackedScene" uid="uid://dyapee2ovrqj4" path="res://content/Test/PeopleF/people_f.tscn" id="5_0v0h5"]
 
 [sub_resource type="GDScript" id="GDScript_wwb6e"]
 script/source = "extends Node
@@ -44,6 +45,12 @@ position = Vector2(576, 324)
 script = ExtResource("3_ojimg")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_56hp1")]
+
+[node name="PeopleF" parent="." instance=ExtResource("5_0v0h5")]
+position = Vector2(1670, 179)
+
+[node name="PeopleF2" parent="." instance=ExtResource("5_0v0h5")]
+position = Vector2(1690, 462)
 
 [connection signal="button_down" from="UI/SwitchPlayerTeam" to="." method="_on_switch_player_team_button_down"]
 [connection signal="button_down" from="UI/SwitchEnemyTeam" to="." method="_on_switch_enemy_team_button_down"]

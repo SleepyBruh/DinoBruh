@@ -1,12 +1,14 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyapee2ovrqj4"]
 
-[ext_resource type="Texture2D" uid="uid://c2mwnl7ni221h" path="res://content/units/soldier/walk-0.png" id="1_y8duw"]
-[ext_resource type="Texture2D" uid="uid://cfatr5g8apgui" path="res://content/units/soldier/walk-1.png" id="2_tih05"]
-[ext_resource type="Texture2D" uid="uid://20p2pm0i53sp" path="res://content/units/soldier/walk-2.png" id="3_6eg5v"]
-[ext_resource type="Texture2D" uid="uid://w40j4xqw5c2e" path="res://content/units/soldier/walk-3.png" id="4_ow76i"]
-[ext_resource type="Texture2D" uid="uid://bac2fh10yo7wj" path="res://content/units/soldier/walk-4.png" id="5_sqi68"]
+[ext_resource type="Texture2D" uid="uid://b02wdv8wbwh7d" path="res://content/units/soldier/walk-0.png" id="1_y8duw"]
+[ext_resource type="Texture2D" uid="uid://dt1sw1ihuivrc" path="res://content/units/soldier/walk-1.png" id="2_tih05"]
+[ext_resource type="Texture2D" uid="uid://j4ot75grg3gh" path="res://content/units/soldier/walk-2.png" id="3_6eg5v"]
+[ext_resource type="Texture2D" uid="uid://b3ldspkafwuc0" path="res://content/units/soldier/walk-3.png" id="4_ow76i"]
+[ext_resource type="Texture2D" uid="uid://dp2rs5rgelquq" path="res://content/units/soldier/walk-4.png" id="5_sqi68"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fx50y"]
+radius = 3.0
+height = 10.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ir3qc"]
 animations = [{
@@ -42,6 +44,7 @@ animations = [{
 shape = SubResource("CapsuleShape2D_fx50y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_ir3qc")
-animation = &"Run"
-frame_progress = 0.00625803
+animation = &"Idle"
+autoplay = "Idle"
